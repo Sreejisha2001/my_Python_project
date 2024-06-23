@@ -11,3 +11,6 @@ with col2:
     private limited as an Ecommerce catalogue and Inventory Manager. This is a portfolio to showcase my project on python which I have done in guidance with Udemy course by Ardit Aulce. The person on the image was my innstructor to this course. He helped us to build 10 realword application 
     """
     st.info(content)
+content=""" Below you can find some of the apps 
+i have built in python. Feel free to contact me. You can find my contact details on this following link i have given here. Thank you !!!"""
+st.write(content)
