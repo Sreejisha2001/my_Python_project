@@ -1,7 +1,9 @@
 import pandas
 import streamlit as st
-# to read csv files
+from fpdf import FPDF
+from generate_pdf import generate_pdf
 
+# to read csv files
 
 st.set_page_config(layout="wide")
 col1, col2 = st.columns(2)
@@ -35,4 +37,10 @@ with col4:
         st.write(row["description"])
         st.image("images/" + row["image"])
         st.write(f"[source code]({row['url']})") #can add github link of each project
+
+
+#add button to generate pdf
+if st.button("Generate PDF"):
+    pdf_data=generate_pdf()
+    st.download_button(label="download pdf", data=pdf_data, file_name="project.pdf", mime="application/pdf")
 
